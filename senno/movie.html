@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>senno</title>
+    <meta name="description" content="A movie rating app">
+    <meta name="keywords" content="movie rating,movies,imfunny movie,senno,rating app">
+    <meta name="author" content="imfunny">
+    <meta property="og:title" content="senno">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A movie rating app"/>
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://imfunniee.github.io/senno">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="senno">
+    <meta property="twitter:description" content="A movie rating app" />
+    <meta property="twitter:image" content="logo.png">
+    <meta property="twitter:url" content="https://imfunniee.github.io/senno">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="loading">
+    <div id="spinner"></div>
+</div>
+<center>
+<div id="signin">
+    <div>
+        <h1>Enter a username to Sign In <a onclick="closebox()"><i class="fas fa-times"></i></a></h1>
+        <input type="text" placeholder="Username" id="username" maxlength="30"><br>
+        <button onclick="signin()">Sign In Anonymously</button>
+        <h4 id="errorSignIn"></h4>
+    </div>
+</div>
+</center>
+<header>
+    <table>
+        <tr>
+            <td id="logo"><div><b>senno</b></div></td>
+            <td id="nav">
+                <a href="index.html">Home</a>
+                <a onclick="signinbox()" id="checkUser">Sign In</a>
+                <button onclick="showSideBar()"><i class="fas fa-bars"></i></button>
+            </td>
+        </tr>
+    </table>
+</header>
+<div id="sidebar">
+    <h1><a onclick="closeBar()"><i class="fas fa-times"></i></a></h1>
+    <a href="index.html">Home</a>
+    <a onclick="signinbox()" id="checkUserBar">Sign In</a>
+</div>
+<div id="details">
+</div>
+<div id="inner_details">
+</div>
+<!-- script -->
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyA4QM1-smRlXWdZiVit80zt-418KHtntp8",
+    authDomain: "senno-47467.firebaseapp.com",
+    databaseURL: "https://senno-47467.firebaseio.com",
+    projectId: "senno-47467",
+    storageBucket: "senno-47467.appspot.com",
+    messagingSenderId: "84687813373"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="movie.js"></script>
+</body>
+</html>
