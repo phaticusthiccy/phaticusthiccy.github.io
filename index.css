@@ -28,7 +28,10 @@ body {
   left: 0;
   right: 0;
 }
-
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
 #spinner {
   animation: rotate 0.5s infinite linear;
   width: 50px;
